@@ -3,7 +3,12 @@
 answer = 25
 while True:
 # 1.告訴使用者需要輸入的數字範圍 input()
-    user_input = int(input('請輸入1到100:'))
+    #user_input = int(input('請輸入1到100:'))
+    try:
+        user_input = int(input("請輸入1到100: "))
+    except ValueError:
+        print("請輸入數字")
+        continue
 
 # 2.使用者猜對要回傳「恭喜中獎」，並結束迴圈的執行
     if user_input == answer:
